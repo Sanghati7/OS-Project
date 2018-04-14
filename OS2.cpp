@@ -235,22 +235,7 @@ int roundrobin(int e, int f)
                   temp[i] = temp[i] - time_quantum;
                   total = total +time_quantum; 
             } 
-            if(temp[i] == 0 && counter == 1) 
-            { 
-                  x--; 
-                  printf("\nProcess[%d]\t\t%d\t\t %d\t\t\t %d", i + 1, bt[i], total - arrival_time[i], total - arrival_time[i] - bt[i]);
-                  wait_time = wait_time + total - arrival_time[i] - bt[i]; 
-                  tat = tat + total - arrival_time[i]; 
-                  counter = 0; 
-            } 
-            if(i == limit - 1) 
-            {
-                  i = 0; 
-            }
-            else if(arrival_time[i + 1] <= total) 
-            {
-                  i++;
-            }
+            
             else 
             {
                   i = 0;
